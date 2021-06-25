@@ -3,37 +3,155 @@ body {
 }
 /*! Header Section !*/
 .headerGrid {
-    background-color: #1B2270;
-    padding-top: 20px;
-    padding-right: 250px;
-    padding-left: 250px;
+   margin: 0px 100px 0px 100px;
     display: grid;
-    grid-template-columns: 300px 500px 300px 300px;
-    grid-template-rows: 130px 60px;
-    grid-template-areas: "logo open social reqDon" "open open nav nav";
+    grid-template-columns: 400px 1fr  300px 255px;
+    grid-template-rows: 40px 90px 90px 80px;
+    grid-template-areas: 
+    "borderTop borderTop borderTop borderTop"
+    "headLogo open social reqDon"
+    "headLogo open nav nav"
+    "signUp signUp signUp signUp"
+    ;
 }
-.logo {
-    grid-area: logo;
+.borderTop {
+    grid-area: borderTop;
+    background-color: #1B2270;
+}
+.space {
+    grid-area: open;
+    background-color: white;
+}
+.headLogo {
+    background-color: white;
+    grid-area: headLogo;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
 }
 
-.social {
+.headSocial {
+    background-color: white;
     grid-area: social;
+    margin: 20px 20px 30px 30px;
 }
 .reqDon {
+    background-color: white;
     color: white;
     grid-area: reqDon;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+.request {
+    background-color: #F5D173;
+    padding: 0 10px 0 10px;
+    margin: 0 5px 20px 5px;
+    text-align: start;
+    border-radius: 0 0px 8px 8px;
+}
+.donate {
+    background-color: #A83D3B;
+    padding: 0px 15px 0px 15px;
+    margin: 0px 0 0px 5px;
+    border-radius: 0 0px 8px 8px;
+}
+.nav {
+    color: white;
+    grid-area: nav;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: space-between;
+    justify-content: flex-end;
+}
+.about {
+    background-color: #8CD4DC;
+    padding: 0 25px 0 25px;
+    margin: 20px 5px 0 5px;
+    border-radius: 8px 8px 0px 0px;
+}
+.kits {
+    background-color: #8CD4DC;
+    padding: 0 40px 0 40px;
+    margin: 20px 5px 0 5px;
+    border-radius: 8px 8px 0px 0px;
+}
+.impact {
+    background-color: #8CD4DC;
+    padding: 0px 16px 0px 16px;
+    margin: 20px 5px 0 5px;
+    border-radius: 8px 8px 0px 0px;
+}
+.events {
+    background-color: #8CD4DC;
+    padding: 0 19px 0 19px;
+    margin: 20px 0px 0 5px;
+    border-radius: 8px 8px 0px 0px;
+}
+.newsSignUp {
+    background-color: #1B2270;
+    grid-area: signUp;
+    display: flex;
+    align-items: center;
+    color: white;
+    padding-left: 20px;
+}
+.firstName {
+    color: black;
+    background-color: white;
+    margin-left: 65px;
+    padding-left: 20px;
+    padding-right: 150px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+}
+.lastName {
+    color: black;
+    background-color: white;
+    margin-left: 20px;
+    padding-left: 20px;
+    padding-right: 150px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+}
+.email {
+    color: black;
+    background-color: white;
+    margin-left: 20px;
+    padding-left: 20px;
+    padding-right: 300px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+}
+.signUpBTN {
+    color: white;
+    background-color: #8CD4DC;
+    margin-left: 65px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    border-radius: 20px;
+}
+.space {
+    background-color: white;
 }
 /*! with you hero !*/
 .withYou_hero {
     position: relative;
-    margin-left: 250px;
-    margin-right: 250px;
+    margin-left: 100px;
+    margin-right: 100px;
     margin-bottom: 450px;
 }
 .withYouBlock{
     position: absolute;
     top: 100px;
-    left: 150px;
+    left: 225px;
     background-color: rgba(196, 196, 196, 0.85);
     border-radius: 15px 15px 15px 15px;
     color: white;
@@ -43,9 +161,9 @@ body {
     position: absolute;
     display: flex;
     flex-direction: row;
-    justify-content: center;
     top: 475px;
-    left: 150px;
+    left: 225px;
+   
 }
 .whoBlock{ 
     padding-top: 20px;
@@ -156,8 +274,8 @@ body {
 /*! Comfort Kits Section !*/
 .kitsContainer {
     position: relative;
-    margin-left: 250px;
-    margin-right: 250px;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 .kitsBlock {
     position: absolute;
@@ -206,11 +324,9 @@ body {
     filter: drop-shadow(0px 4px 4px darkgrey);
 }
 /*! Testimonials Section !*/
-#testimonials {
-}
 .testHeading {
     display: flex;
-    margin-top: 50px;
+    margin: 50px 0px 0px 0px;
     background-color: #F5D173;
     height: 76px;
     border-radius: 15px 15px 15px 15px;
@@ -222,9 +338,16 @@ body {
     Color: white;
     filter: drop-shadow(0px 4px 4px darkgrey);
 }
+#testimonials {
+    display: flex;
+    justify-content: center;
+}
+
 .testimonialGrid {
   background-color: lightgrey;
   padding-top: 50px;
+  padding-left: 15px;
+  padding-right: 15px;
   align-items: center;
   justify-content: center;
   margin-left: 250px;
@@ -271,13 +394,10 @@ body {
 .test_1 {
     color: black;
     grid-area: text1;
-    justify-content: center;
 }
 .test_2 {
     color: black;
     grid-area: text2;
-    justify-content: center;
-    align-items: center;
 }
 .test_3 {
     color: black;
@@ -303,9 +423,11 @@ body {
 /*! Footer Section!*/
 .footerGrid {
   background-color: #1B2270;
-  padding-top: 20px;
-  padding-right: 250px;
-  padding-left: 250px;
+  margin-left: 100px;
+  margin-right: 100px;
+  padding-top: 10px;
+  padding-right: 25px;
+  padding-left: 25px;
   display: grid;
   grid-template-columns: 300px auto 300px;
   grid-template-rows: 130px 60px;
@@ -334,7 +456,7 @@ body {
     color: white;
     grid-area: contact;
     text-align: right;
-    justify-items: flex-end;
+    justify-items: flex-start;
 }
 .policies {
     grid-area: policies;
@@ -359,3 +481,91 @@ body {
     text-align: right;
 }
 
+@media only screen and (max-width: 600px) {
+    .kitsContainer {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    .kitsBlock {
+        bottom: 50px;
+        right: 50px;
+        background-color: rgba(196, 196, 196, 0.85);
+        border-radius: 15px 15px 15px 15px;
+        color: white;
+        filter: drop-shadow(0px 4px 4px darkgrey);
+      }
+    .testHeading {
+        display: flex;
+        margin-top: 50px;
+        background-color: #F5D173;
+        height: 76px;
+        border-radius: 15px 15px 15px 15px;
+        font-size: 36px;
+        align-items: center;
+        justify-content: center;
+        font-family: 'poppins', sans-serif;
+        font-weight: 700;
+        Color: white;
+        filter: drop-shadow(0px 4px 4px darkgrey);
+    }
+    .testimonialGrid {
+        background-color: lightgrey;
+        padding-top: 50px;
+        align-items: center;
+        justify-content: center;
+        margin-left: 50px auto;
+        margin-right: 50px auto;
+        display: grid;
+        grid-template-columns: 500px;
+        grid-template-rows: 300px 300px 300px 300px 300px 300px 300px 300px 300px 300px 300px 300px;
+        grid-row-gap: 20px;
+        grid-template-areas: 
+        "img1"
+        "text1"
+        "img2"
+        "text2"
+        "img3"
+        "text3"
+        "img4"
+        "text4"
+        "img5"
+        "text5"
+        "img6"
+        "text6"
+        ;
+      }
+      .gridArea {
+        align-items: center;
+        justify-content: center;
+      }
+    .img_1 {
+        grid-area: img1;
+        filter: drop-shadow(0px 4px 4px darkgrey);
+        justify-content: center;
+    }
+    .img_2 {
+        grid-area: img2;
+        filter: drop-shadow(0px 4px 4px darkgrey);
+        justify-content: center;
+    }
+    .img_3 {
+        grid-area: img3;
+        filter: drop-shadow(0px 4px 4px darkgrey);
+        justify-content: center;
+    }
+    .img_4 {
+        grid-area: img4;
+        filter: drop-shadow(0px 4px 4px darkgrey);
+        justify-content: center;
+    }
+    .img_5 {
+        grid-area: img5;
+        filter: drop-shadow(0px 4px 4px darkgrey);
+        justify-content: center;
+    }
+    .img_6 {
+        grid-area: img6;
+        filter: drop-shadow(0px 4px 4px darkgrey);
+        justify-content: center;
+    } 
+}
